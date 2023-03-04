@@ -1,4 +1,4 @@
-module jsondecomposer
+module github.com/hypolas/readjsonfromflatpath
 
 go 1.20
 
