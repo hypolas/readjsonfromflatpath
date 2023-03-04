@@ -71,15 +71,6 @@ func keyTypeDecomposer(key string, index int, haveNext bool, arrayPath []string)
 	return tmpKey
 }
 
-func isIn(s string, array []string) bool {
-	for _, a := range array {
-		if a == s {
-			return true
-		}
-	}
-	return false
-}
-
 func splitFlatten(flatten string) []string {
 	flatten = strings.TrimSpace(flatten)
 	if !strings.Contains(flatten, separator) {

@@ -3,7 +3,6 @@ package hypolasjsondecomposer
 import (
 	"github.com/hypolas/hypolaslogger"
 	"os"
-	"time"
 )
 
 type JSONKey struct {
@@ -11,17 +10,6 @@ type JSONKey struct {
 	KeyIsArray bool
 	ArrayIndex int
 	IsLast     bool
-}
-
-type JSONData struct {
-	FlattenPath string
-	JSONFile    []byte
-}
-
-type HlckHYPOLAS struct {
-	IsUp      bool
-	WaitUp    bool
-	WaitRetry time.Duration
 }
 
 var (
