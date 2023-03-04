@@ -5,6 +5,7 @@ import (
 	"os"
 )
 
+// JSONKey store JSONKey configuration
 type JSONKey struct {
 	Name       string
 	KeyIsArray bool
