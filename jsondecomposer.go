@@ -92,5 +92,5 @@ func checkVariable(path string) string {
 		path = os.Getenv("HYPOLAS_READ_JSON")
 		return path
 	}
-	return ""
+	return path
 }
