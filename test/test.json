@@ -1,0 +1,13 @@
+{
+    "hostname": "myhost",
+    "services": [
+      {
+        "nom": "nginx",
+        "status": "up"
+      },
+      {
+        "nom": "httpd",
+        "status": "down"
+      }
+    ]
+  }
