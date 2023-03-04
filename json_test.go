@@ -13,6 +13,9 @@ func TestResolve(t *testing.T) {
 	logf.Info.Println(ReadJSONFromFlatPath("services", jso))
 	logf.Info.Println(ReadJSONFromFlatPath("services__1__status", jso))
 	logf.Info.Println(ReadJSONFromFlatPath("services__0__nom", jso))
+	logf.Info.Println(ReadJSONFromFlatPath("services__0__nom", jso))
+	logf.Info.Println(ReadJSONFromFlatPath("services__2__level", jso))
+	logf.Info.Println(ReadJSONFromFlatPath("services__2__bad", jso))
 
 	readFile, err := os.Open(logf.LogFile.Name())
 
