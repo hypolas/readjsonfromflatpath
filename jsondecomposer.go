@@ -2,12 +2,15 @@ package hypolasjsondecomposer
 
 import (
 	"encoding/json"
+	"os"
 	"strconv"
 	"strings"
 )
 
 // ReadJSONFromFlatPath read JSON with path flatten. Separator: "__"
 func ReadJSONFromFlatPath(jpath string, jsonFile []byte) (resultJSON string) {
+	jpath = checkVariable(jpath)
+
 	arrayPath := splitFlatten(jpath)
 	lenPath := len(arrayPath)
 	var skipThis = -1
@@ -77,4 +80,17 @@ func splitFlatten(flatten string) []string {
 		return []string{}
 	}
 	return strings.Split(flatten, separator)
+}
+
+func checkVariable(path string) string {
+	if path == "" {
+		path = os.Getenv("HYPOLAS_HEALTHCHECK_HTTP_JSON")
+		return path
+	}
+
+	if path == "" {
+		path = os.Getenv("HYPOLAS_READ_JSON")
+		return path
+	}
+	return path
 }
