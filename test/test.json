@@ -3,11 +3,21 @@
     "services": [
       {
         "nom": "nginx",
-        "status": "up"
+        "status": "up",
+        "bad": true,
+        "level": 1
       },
       {
         "nom": "httpd",
-        "status": "down"
+        "status": "down",
+        "bad": true,
+        "level": 1
+      },
+      {
+        "nom": "traefik",
+        "status": "down",
+        "bad": false,
+        "level": 100
       }
     ]
   }
