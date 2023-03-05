@@ -2,6 +2,7 @@ package hypolasjsondecomposer
 
 import (
 	"encoding/json"
+	_ "github.com/hypolas/hypolashlckhelpers"
 	"os"
 	"strconv"
 	"strings"
